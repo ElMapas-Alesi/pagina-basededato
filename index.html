@@ -1,38 +1,1041 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banfield</title>
+
+    <title>Academia SQL| Aprende SQL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <a href="index.html" class="logo">Banfield's Web</a>
+    <!--menu-->
 
-        <div class="menu-btn" id="menuBtn">
-            ☰
-        </div>
+    <header class="header">
 
-        <nav id="menu">
-            <ul>
-                <li><a href="ubicacion.html">Ubicación</a></li>
-                <li><a href="historia">Historia</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">&lt;/&gt;</span>
+                SQL<span>Academia</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sql">SQL</a></li>
+                <li><a href="#tablas">Tablas</a></li>
+                <li><a href="#der">DER</a></li>
+                <li><a href="#normalizacion">Normalización</a></li>
+                <li><a href="#consultas">Consultas</a></li>
+                <li><a href="#stored-procedures">Stored Procedures</a></li>
             </ul>
+
+            <a href="#ejemplo" class="nav-button">
+                Ver ejemplo
+            </a>
+
         </nav>
+
     </header>
 
-    <main id="inicio">
-        <section class="contenido">
-            <h1>Bienvenido a <span>Banfield</span></h1>
 
-            <p>
-                El mejor club de la historia de la primera nacional argentina
-            </p>
+    <main>
 
-            <a href="titulos.html" class="boton">Titulos</a>
+        <!--inicio-->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <span></span>
+                    GUÍA COMPLETA DE SQL
+                </div>
+
+                <h1>
+                    Aprende a dominar
+                    <span>SQL</span>
+                </h1>
+
+                <p>
+                    Descubre cómo funcionan las bases de datos,
+                    las tablas, consultas, relaciones, normalización
+                    y Stored Procedures de una manera sencilla.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#sql" class="btn btn-primary">
+                        Comenzar
+                    </a>
+
+                    <a href="#ejemplo" class="btn btn-secondary">
+                        Ver código
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-code">
+
+                <div class="code-window">
+
+                    <div class="code-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <p>database.sql</p>
+                    </div>
+
+                    <div class="code-content">
+
+<pre><code><span class="keyword">CREATE TABLE</span> usuarios (
+    id <span class="type">INT</span> <span class="keyword">PRIMARY KEY</span>,
+    nombre <span class="type">VARCHAR</span>(100),
+    email <span class="type">VARCHAR</span>(150)
+);
+
+<span class="keyword">SELECT</span> *
+<span class="keyword">FROM</span> usuarios
+<span class="keyword">WHERE</span> id = <span class="number">1</span>;</code></pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
+
+
+        <!--que seria sql-->
+
+        <section id="sql" class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">01</span>
+
+                <div>
+                    <p class="section-label">FUNDAMENTOS</p>
+
+                    <h2>
+                        ¿Qué es <span>SQL</span>?
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="content-grid">
+
+                <div class="text-content">
+
+                    <p>
+                        <strong>SQL (Structured Query Language)</strong>
+                        es un lenguaje utilizado para administrar y
+                        manipular bases de datos relacionales.
+                    </p>
+
+                    <p>
+                        Permite crear estructuras, insertar información,
+                        modificar registros, eliminar datos y realizar
+                        consultas para obtener información específica.
+                    </p>
+
+                    <p>
+                        SQL es utilizado por sistemas y aplicaciones que
+                        necesitan almacenar grandes cantidades de información
+                        de forma organizada.
+                    </p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <div class="card-icon">
+                        DB
+                    </div>
+
+                    <h3>
+                        Bases de datos
+                    </h3>
+
+                    <p>
+                        Una base de datos organiza información para que
+                        pueda ser almacenada, consultada y modificada
+                        fácilmente.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="features">
+
+                <div class="feature-card">
+
+                    <span class="feature-number">01</span>
+
+                    <h3>Crear</h3>
+
+                    <p>
+                        Crear bases de datos, tablas y estructuras.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <span class="feature-number">02</span>
+
+                    <h3>Consultar</h3>
+
+                    <p>
+                        Buscar y analizar información almacenada.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <span class="feature-number">03</span>
+
+                    <h3>Modificar</h3>
+
+                    <p>
+                        Actualizar registros existentes.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <span class="feature-number">04</span>
+
+                    <h3>Eliminar</h3>
+
+                    <p>
+                        Eliminar datos o estructuras.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--TABLAS-->
+
+        <section id="tablas" class="section section-dark">
+
+            <div class="section-title">
+
+                <span class="section-number">02</span>
+
+                <div>
+                    <p class="section-label">ESTRUCTURA</p>
+
+                    <h2>
+                        Tablas
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="content-grid">
+
+                <div class="text-content">
+
+                    <p>
+                        Las <strong>tablas</strong> son la estructura principal
+                        donde se almacena la información de una base de datos
+                        relacional.
+                    </p>
+
+                    <p>
+                        Cada tabla está formada por <strong>columnas</strong>
+                        y <strong>filas</strong>.
+                    </p>
+
+                    <ul class="check-list">
+
+                        <li>
+                            Las columnas representan atributos.
+                        </li>
+
+                        <li>
+                            Las filas representan registros.
+                        </li>
+
+                        <li>
+                            Cada columna tiene un tipo de dato.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Edad</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Juan</td>
+                                <td>juan@email.com</td>
+                                <td>20</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Lucía</td>
+                                <td>lucia@email.com</td>
+                                <td>22</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Martín</td>
+                                <td>martin@email.com</td>
+                                <td>19</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div class="code-box">
+
+<pre><code><span class="keyword">CREATE TABLE</span> usuarios (
+
+    id <span class="type">INT</span> <span class="keyword">PRIMARY KEY</span>,
+
+    nombre <span class="type">VARCHAR</span>(100),
+
+    email <span class="type">VARCHAR</span>(150),
+
+    edad <span class="type">INT</span>
+
+);</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!--der-->
+
+        <section id="der" class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">03</span>
+
+                <div>
+                    <p class="section-label">MODELADO</p>
+
+                    <h2>
+                        Diagrama <span>DER</span>
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="content-grid">
+
+                <div class="text-content">
+
+                    <p>
+                        El <strong>Diagrama Entidad-Relación (DER)</strong>
+                        es una representación visual de una base de datos.
+                    </p>
+
+                    <p>
+                        Permite identificar las entidades, sus atributos
+                        y las relaciones que existen entre ellas antes
+                        de crear las tablas.
+                    </p>
+
+                    <h3>Elementos principales</h3>
+
+                    <ul class="check-list">
+
+                        <li>
+                            Entidades
+                        </li>
+
+                        <li>
+                            Atributos
+                        </li>
+
+                        <li>
+                            Claves primarias
+                        </li>
+
+                        <li>
+                            Claves foráneas
+                        </li>
+
+                        <li>
+                            Relaciones
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="der-diagram">
+
+                    <div class="entity">
+
+                        <div class="entity-header">
+                            CLIENTE
+                        </div>
+
+                        <div class="entity-body">
+
+                            <p>
+                                <strong>PK</strong> id_cliente
+                            </p>
+
+                            <p>
+                                nombre
+                            </p>
+
+                            <p>
+                                email
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="relationship">
+
+                        <span>1</span>
+
+                        <div class="line"></div>
+
+                        <span>N</span>
+
+                    </div>
+
+
+                    <div class="entity">
+
+                        <div class="entity-header">
+                            PEDIDO
+                        </div>
+
+                        <div class="entity-body">
+
+                            <p>
+                                <strong>PK</strong> id_pedido
+                            </p>
+
+                            <p>
+                                fecha
+                            </p>
+
+                            <p>
+                                <strong>FK</strong> id_cliente
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--normalisazion-->
+
+        <section id="normalizacion" class="section section-dark">
+
+            <div class="section-title">
+
+                <span class="section-number">04</span>
+
+                <div>
+
+                    <p class="section-label">
+                        ORGANIZACIÓN DE DATOS
+                    </p>
+
+                    <h2>
+                        Normalización
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-content wide">
+
+                <p>
+                    La <strong>normalización</strong> es un proceso utilizado
+                    para organizar los datos de una base de datos y reducir
+                    la redundancia o repetición innecesaria.
+                </p>
+
+                <p>
+                    Su objetivo es conseguir una estructura más eficiente,
+                    coherente y fácil de mantener.
+                </p>
+
+            </div>
+
+
+            <div class="normalization-grid">
+
+                <div class="normalization-card">
+
+                    <span>1FN</span>
+
+                    <h3>
+                        Primera Forma Normal
+                    </h3>
+
+                    <p>
+                        Cada campo debe contener un único valor
+                        y no debe haber grupos repetitivos.
+                    </p>
+
+                </div>
+
+
+                <div class="normalization-card">
+
+                    <span>2FN</span>
+
+                    <h3>
+                        Segunda Forma Normal
+                    </h3>
+
+                    <p>
+                        Debe cumplir 1FN y los atributos deben
+                        depender completamente de la clave primaria.
+                    </p>
+
+                </div>
+
+
+                <div class="normalization-card">
+
+                    <span>3FN</span>
+
+                    <h3>
+                        Tercera Forma Normal
+                    </h3>
+
+                    <p>
+                        Debe cumplir 2FN y no deben existir
+                        dependencias transitivas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--consultitas-->
+
+        <section id="consultas" class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">05</span>
+
+                <div>
+
+                    <p class="section-label">
+                        MANIPULACIÓN DE DATOS
+                    </p>
+
+                    <h2>
+                        Consultas <span>SQL</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="query-grid">
+
+                <div class="query-card">
+
+                    <span class="query-tag">
+                        SELECT
+                    </span>
+
+                    <h3>
+                        Consultar información
+                    </h3>
+
+                    <p>
+                        Permite obtener datos de una o varias tablas.
+                    </p>
+
+<pre><code><span class="keyword">SELECT</span> *
+<span class="keyword">FROM</span> usuarios;</code></pre>
+
+                </div>
+
+
+                <div class="query-card">
+
+                    <span class="query-tag">
+                        WHERE
+                    </span>
+
+                    <h3>
+                        Filtrar resultados
+                    </h3>
+
+                    <p>
+                        Permite establecer condiciones.
+                    </p>
+
+<pre><code><span class="keyword">SELECT</span> *
+<span class="keyword">FROM</span> usuarios
+<span class="keyword">WHERE</span> edad &gt; <span class="number">18</span>;</code></pre>
+
+                </div>
+
+
+                <div class="query-card">
+
+                    <span class="query-tag">
+                        INSERT
+                    </span>
+
+                    <h3>
+                        Insertar datos
+                    </h3>
+
+                    <p>
+                        Agrega nuevos registros a una tabla.
+                    </p>
+
+<pre><code><span class="keyword">INSERT INTO</span> usuarios
+(nombre, edad)
+<span class="keyword">VALUES</span>
+(<span class="string">'Juan'</span>, <span class="number">20</span>);</code></pre>
+
+                </div>
+
+
+                <div class="query-card">
+
+                    <span class="query-tag">
+                        UPDATE
+                    </span>
+
+                    <h3>
+                        Actualizar datos
+                    </h3>
+
+                    <p>
+                        Modifica información existente.
+                    </p>
+
+<pre><code><span class="keyword">UPDATE</span> usuarios
+<span class="keyword">SET</span> edad = <span class="number">21</span>
+<span class="keyword">WHERE</span> id = <span class="number">1</span>;</code></pre>
+
+                </div>
+
+
+                <div class="query-card">
+
+                    <span class="query-tag">
+                        DELETE
+                    </span>
+
+                    <h3>
+                        Eliminar datos
+                    </h3>
+
+                    <p>
+                        Elimina registros de una tabla.
+                    </p>
+
+<pre><code><span class="keyword">DELETE FROM</span> usuarios
+<span class="keyword">WHERE</span> id = <span class="number">1</span>;</code></pre>
+
+                </div>
+
+
+                <div class="query-card">
+
+                    <span class="query-tag">
+                        JOIN
+                    </span>
+
+                    <h3>
+                        Combinar tablas
+                    </h3>
+
+                    <p>
+                        Permite relacionar información entre tablas.
+                    </p>
+
+<pre><code><span class="keyword">SELECT</span> *
+<span class="keyword">FROM</span> clientes c
+<span class="keyword">JOIN</span> pedidos p
+<span class="keyword">ON</span>
+c.id = p.id_cliente;</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--store procidium-->
+
+        <section id="stored-procedures" class="section section-dark">
+
+            <div class="section-title">
+
+                <span class="section-number">06</span>
+
+                <div>
+
+                    <p class="section-label">
+                        PROGRAMACIÓN SQL
+                    </p>
+
+                    <h2>
+                        Stored <span>Procedures</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="text-content">
+
+                    <p>
+                        Un <strong>Stored Procedure</strong> es un conjunto
+                        de instrucciones SQL almacenadas dentro del servidor
+                        de la base de datos.
+                    </p>
+
+                    <p>
+                        Puede recibir parámetros, realizar operaciones
+                        y devolver resultados.
+                    </p>
+
+                    <p>
+                        Son útiles para reutilizar código y centralizar
+                        operaciones frecuentes sobre los datos.
+                    </p>
+
+                </div>
+
+
+                <div class="code-box">
+
+<pre><code><span class="keyword">DELIMITER</span> //
+
+<span class="keyword">CREATE PROCEDURE</span>
+buscar_usuario(
+    <span class="keyword">IN</span> usuario_id <span class="type">INT</span>
+)
+
+<span class="keyword">BEGIN</span>
+
+    <span class="keyword">SELECT</span> *
+    <span class="keyword">FROM</span> usuarios
+    <span class="keyword">WHERE</span>
+    id = usuario_id;
+
+<span class="keyword">END</span> //
+
+<span class="keyword">DELIMITER</span> ;</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--clabez-->
+
+        <section id="claves" class="section">
+
+            <div class="section-title">
+
+                <span class="section-number">07</span>
+
+                <div>
+
+                    <p class="section-label">
+                        RELACIONES
+                    </p>
+
+                    <h2>
+                        Claves de una base de datos
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="key-grid">
+
+                <div class="key-card">
+
+                    <div class="key-icon">
+                        PK
+                    </div>
+
+                    <h3>
+                        Primary Key
+                    </h3>
+
+                    <p>
+                        Identifica de manera única cada registro
+                        de una tabla.
+                    </p>
+
+                </div>
+
+
+                <div class="key-card">
+
+                    <div class="key-icon">
+                        FK
+                    </div>
+
+                    <h3>
+                        Foreign Key
+                    </h3>
+
+                    <p>
+                        Permite relacionar una tabla con otra
+                        utilizando una clave.
+                    </p>
+
+                </div>
+
+
+                <div class="key-card">
+
+                    <div class="key-icon">
+                        UQ
+                    </div>
+
+                    <h3>
+                        Unique
+                    </h3>
+
+                    <p>
+                        Garantiza que los valores de una columna
+                        no se repitan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--ejemplito uwu-->
+
+        <section id="ejemplo" class="example-section">
+
+            <div class="example-content">
+
+                <p class="section-label">
+                    EJEMPLO PRÁCTICO
+                </p>
+
+                <h2>
+                    Una base de datos desde cero
+                </h2>
+
+                <p>
+                    Veamos cómo podemos crear una tabla y realizar
+                    una consulta básica.
+                </p>
+
+                <div class="large-code">
+
+<pre><code><span class="comment">-- Crear la tabla</span>
+
+<span class="keyword">CREATE TABLE</span> alumnos (
+
+    id_alumno <span class="type">INT</span>
+        <span class="keyword">PRIMARY KEY</span>
+        <span class="keyword">AUTO_INCREMENT</span>,
+
+    nombre <span class="type">VARCHAR</span>(100),
+
+    apellido <span class="type">VARCHAR</span>(100),
+
+    curso <span class="type">VARCHAR</span>(50)
+
+);
+
+
+<span class="comment">-- Insertar información</span>
+
+<span class="keyword">INSERT INTO</span> alumnos
+(nombre, apellido, curso)
+
+<span class="keyword">VALUES</span>
+(<span class="string">'Alexis'</span>,
+ <span class="string">'Silva'</span>,
+ <span class="string">'Base de Datos'</span>);
+
+
+<span class="comment">-- Consultar alumnos</span>
+
+<span class="keyword">SELECT</span>
+    nombre,
+    apellido,
+    curso
+
+<span class="keyword">FROM</span> alumnos
+
+<span class="keyword">WHERE</span>
+    curso = <span class="string">'Base de Datos'</span>;</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+    <!--pie-->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            &lt;/&gt; SQL<span>Academy</span>
+        </div>
+
+        <p>
+            Guía educativa sobre bases de datos y SQL.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 SQL Academy
+        </p>
+
+    </footer>
+
+
+    <!--java ia-->
+
+    <script>
+
+        // Cambia el estilo del menú cuando se hace scroll
+
+        window.addEventListener("scroll", function () {
+
+            const header = document.querySelector(".header");
+
+            if (window.scrollY > 50) {
+
+                header.classList.add("scrolled");
+
+            } else {
+
+                header.classList.remove("scrolled");
+
+            }
+
+        });
+
+
+        // Animación de aparición de elementos
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+
+        document.querySelectorAll(
+            ".section, .feature-card, .query-card, .key-card, .normalization-card"
+        ).forEach((element) => {
+
+            element.classList.add("hidden");
+
+            observer.observe(element);
+
+        });
+
+    </script>
+
+</body>
 </html>
